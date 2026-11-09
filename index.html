@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pusat Tuisyen Ceria — Small-group tuition in SS2, Petaling Jaya</title>
+<meta name="description" content="Small-group tuition for Standard 4 to Form 5 in SS2, Petaling Jaya. Max 8 students per class. Maths, Science, Bahasa Melayu and English. Free trial class.">
+<style>
+  :root{
+    --ink:#1c2420; --muted:#6a7a72; --line:#e6e3db; --paper:#fbf9f4;
+    --brand:#1f6f4e; --brand-soft:#e9f3ed; --warm:#c9762b; --warm-soft:#fbeee0;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+       color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+  img{max-width:100%;display:block}
+
+  /* header */
+  header{position:sticky;top:0;z-index:20;background:rgba(251,249,244,.92);
+         backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .bar{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.4px;font-size:17px}
+  .logo .mark{width:32px;height:32px;border-radius:9px;background:var(--brand);color:#fff;
+               display:grid;place-items:center;font-size:15px;font-weight:800}
+  nav{display:flex;gap:22px;font-size:14px;color:var(--muted)}
+  nav a{color:inherit;text-decoration:none}
+  nav a:hover{color:var(--brand)}
+  .cta-top{background:var(--brand);color:#fff;text-decoration:none;font-size:13.5px;font-weight:700;
+           padding:10px 18px;border-radius:100px;white-space:nowrap}
+  @media(max-width:820px){nav{display:none}}
+
+  /* hero */
+  .hero{padding:64px 0 56px;display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--brand-soft);
+           color:var(--brand);font-size:12px;font-weight:700;letter-spacing:.7px;text-transform:uppercase;
+           padding:7px 14px;border-radius:100px;margin-bottom:20px}
+  h1{font-size:44px;line-height:1.1;letter-spacing:-1.4px;font-weight:800}
+  h1 em{font-style:normal;color:var(--brand)}
+  .lede{font-size:17px;color:var(--muted);margin:20px 0 28px;max-width:44ch}
+  .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:9px;text-decoration:none;font-weight:700;font-size:15px;
+       padding:15px 26px;border-radius:100px}
+  .btn-primary{background:var(--brand);color:#fff;box-shadow:0 10px 24px -12px rgba(31,111,78,.7)}
+  .btn-ghost{background:#fff;color:var(--ink);border:1.5px solid var(--line)}
+  .trust{display:flex;gap:26px;margin-top:30px;font-size:13px;color:var(--muted);flex-wrap:wrap}
+  .trust b{display:block;font-size:20px;color:var(--ink);letter-spacing:-.5px}
+
+  .hero-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px;
+             box-shadow:0 24px 60px -34px rgba(28,36,32,.35)}
+  .hero-card h2{font-size:15px;letter-spacing:.4px;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+  .slot{display:flex;justify-content:space-between;align-items:center;padding:11px 0;border-bottom:1px dashed var(--line);font-size:14px}
+  .slot:last-child{border-bottom:0}
+  .slot .k{font-weight:600}
+  .pill{font-size:11px;font-weight:700;padding:4px 10px;border-radius:100px;background:var(--brand-soft);color:var(--brand)}
+  .pill.warn{background:var(--warm-soft);color:var(--warm)}
+  .slot-note{font-size:12.5px;color:var(--muted);margin-top:14px}
+
+  /* sections */
+  section{padding:62px 0}
+  .section-head{max-width:56ch;margin-bottom:34px}
+  .section-head h2{font-size:30px;letter-spacing:-.9px;line-height:1.2}
+  .section-head p{color:var(--muted);margin-top:12px;font-size:15.5px}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px}
+  .card h3{font-size:16.5px;margin-bottom:8px;letter-spacing:-.3px}
+  .card p{font-size:14px;color:var(--muted)}
+  .card .tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;
+             color:var(--brand);background:var(--brand-soft);padding:5px 11px;border-radius:100px;margin-bottom:14px}
+  .num{font-size:12px;font-weight:800;color:var(--warm);letter-spacing:1px}
+
+  /* timetable */
+  .table-wrap{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  th{background:#f2f0e9;text-align:left;padding:14px 18px;font-size:12px;letter-spacing:.8px;
+     text-transform:uppercase;color:var(--muted);font-weight:700}
+  td{padding:14px 18px;border-top:1px solid var(--line)}
+  td.free{color:var(--brand);font-weight:600}
+
+  /* testimonials */
+  .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .quote{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;font-size:14.5px}
+  .quote p{color:#2b342f}
+  .quote .who{margin-top:16px;font-size:13px;color:var(--muted);display:flex;align-items:center;gap:10px}
+  .avatar{width:32px;height:32px;border-radius:50%;background:var(--brand-soft);color:var(--brand);
+          display:grid;place-items:center;font-weight:800;font-size:13px}
+
+  /* visit */
+  .visit{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  .visit-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px}
+  .visit-card h3{font-size:17px;margin-bottom:16px}
+  .row{display:flex;gap:12px;padding:10px 0;font-size:14.5px;border-bottom:1px solid var(--line)}
+  .row:last-child{border-bottom:0}
+  .row .lbl{width:88px;color:var(--muted);flex:none;font-size:13px;padding-top:2px}
+  .map{background:linear-gradient(135deg,#e8efe9,#dfe9e2);border-radius:16px;min-height:280px;
+       display:grid;place-items:center;color:var(--brand);font-size:13.5px;font-weight:600;text-align:center;padding:20px}
+
+  /* final cta */
+  .final{background:var(--brand);color:#fff;border-radius:22px;padding:46px 40px;text-align:center;margin:0 0 10px}
+  .final h2{font-size:29px;letter-spacing:-.9px;line-height:1.2}
+  .final p{opacity:.86;margin:12px auto 26px;max-width:46ch;font-size:15px}
+  .final .btn{background:#fff;color:var(--brand)}
+
+  footer{padding:34px 0 46px;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+
+  /* floating whatsapp */
+  .fab{position:fixed;right:18px;bottom:18px;z-index:30;background:#25D366;color:#fff;text-decoration:none;
+       display:flex;align-items:center;gap:10px;padding:14px 20px;border-radius:100px;font-weight:700;font-size:14.5px;
+       box-shadow:0 14px 30px -12px rgba(37,211,102,.8)}
+
+  @media(max-width:880px){
+    .hero{grid-template-columns:1fr;gap:34px;padding:44px 0 40px}
+    h1{font-size:34px;letter-spacing:-1px}
+    .grid-3,.quotes{grid-template-columns:1fr}
+    .visit{grid-template-columns:1fr}
+    section{padding:46px 0}
+    .final{padding:34px 22px;border-radius:18px}
+    .final h2{font-size:23px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <div class="logo"><span class="mark">C</span> Pusat Tuisyen Ceria</div>
+    <nav>
+      <a href="#programmes">Programmes</a>
+      <a href="#timetable">Timetable</a>
+      <a href="#results">Results</a>
+      <a href="#visit">Visit us</a>
+    </nav>
+    <a class="cta-top" href="https://wa.me/60123456789?text=Hi%2C%20I%27d%20like%20to%20ask%20about%20classes">Book a free trial</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="hero">
+      <div>
+        <span class="eyebrow">SS2 · Petaling Jaya · since 2011</span>
+        <h1>Small classes. <em>Real attention.</em> Results your child can feel.</h1>
+        <p class="lede">Maximum 8 students per class for Standard 4 to Form 5. Maths, Science, Bahasa Melayu and English — taught by teachers who know each child's name, not just their number.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://wa.me/60123456789?text=Hi%2C%20I%27d%20like%20to%20book%20a%20free%20trial%20class">WhatsApp us — free trial class</a>
+          <a class="btn btn-ghost" href="#timetable">See timetable</a>
+        </div>
+        <div class="trust">
+          <div><b>8</b>max per class</div>
+          <div><b>14</b>years in SS2</div>
+          <div><b>92%</b>improved a grade</div>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <h2>This week's availability</h2>
+        <div class="slot"><span class="k">Standard 4–6 Maths</span><span class="pill">2 seats</span></div>
+        <div class="slot"><span class="k">Form 1–3 Science</span><span class="pill warn">1 seat left</span></div>
+        <div class="slot"><span class="k">Form 4–5 Add Maths</span><span class="pill">4 seats</span></div>
+        <div class="slot"><span class="k">Bahasa Melayu (all levels)</span><span class="pill">3 seats</span></div>
+        <p class="slot-note">Classes fill by the second week of the month. Message us and we'll hold a seat for 48 hours, no payment needed.</p>
+      </div>
+    </section>
+  </div>
+
+  <section id="programmes" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Three ways we teach</h2>
+        <p>Every class is capped at 8 so the teacher can actually see where each student gets stuck — not just finish the syllabus.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <span class="tag">Primary</span>
+          <h3>Standard 4–6</h3>
+          <p>Building the basics properly: times tables that stick, reading comprehension, and the confidence to raise a hand in class.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Lower secondary</span>
+          <h3>Form 1–3</h3>
+          <p>The years where students quietly fall behind. We test monthly and tell parents exactly which topic is the problem.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Upper secondary</span>
+          <h3>Form 4–5</h3>
+          <p>SPM focused. Past-year drills, marking to real exam standards, and weekly one-to-one feedback on what cost the marks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="timetable">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Weekly timetable</h2>
+        <p>Two intakes a year. Mid-term joining is fine — we run a catch-up session for anyone joining late.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Class</th><th>Day</th><th>Time</th><th>Teacher</th><th>Status</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Standard 4–6 Maths</td><td>Tue &amp; Thu</td><td>4:30 – 6:00 pm</td><td>Ms. Tan</td><td class="free">2 seats</td></tr>
+            <tr><td>Form 1–3 Science</td><td>Wed</td><td>5:00 – 6:30 pm</td><td>Mr. Raj</td><td>1 seat left</td></tr>
+            <tr><td>Form 4–5 Add Maths</td><td>Sat</td><td>10:00 am – 12:00 pm</td><td>Mr. Raj</td><td class="free">4 seats</td></tr>
+            <tr><td>Bahasa Melayu (all levels)</td><td>Sun</td><td>2:00 – 3:30 pm</td><td>Ms. Farah</td><td class="free">3 seats</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="results" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>What parents say</h2>
+        <p>Names shortened at parents' request. Full references available when you visit.</p>
+      </div>
+      <div class="quotes">
+        <div class="quote">
+          <p>"My daughter went from failing Science to a B+ in one year. What changed was that the teacher actually noticed she was memorising instead of understanding."</p>
+          <div class="who"><span class="avatar">SL</span> S. Lim · parent, Form 2</div>
+        </div>
+        <div class="quote">
+          <p>"They message me after every monthly test with what to work on. No other tuition centre has ever done that."</p>
+          <div class="who"><span class="avatar">RK</span> R. Kumar · parent, Standard 5</div>
+        </div>
+        <div class="quote">
+          <p>"Eight students per class is not marketing — I sat in once and counted. My son finally asks questions without being embarrassed."</p>
+          <div class="who"><span class="avatar">AW</span> A. Wong · parent, Form 4</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Come see a class</h2>
+        <p>No obligation, no sales pitch. Sit in the back, watch how your child responds, then decide.</p>
+      </div>
+      <div class="visit">
+        <div class="visit-card">
+          <h3>Find us</h3>
+          <div class="row"><span class="lbl">Address</span><span>23A, Jalan SS 2/24, SS2, 47300 Petaling Jaya, Selangor</span></div>
+          <div class="row"><span class="lbl">Hours</span><span>Tue–Fri 3:00 – 9:30 pm · Sat–Sun 9:00 am – 6:00 pm<br>Closed Mondays</span></div>
+          <div class="row"><span class="lbl">WhatsApp</span><span>+60 12-345 6789</span></div>
+          <div class="row"><span class="lbl">Parking</span><span>Open-air lot behind the shophouse, free after 5 pm</span></div>
+        </div>
+        <div class="map">
+          <div>
+            <strong>23A, Jalan SS 2/24, SS2</strong><br>
+            Two doors from the SS2 morning market<br>
+            <span style="font-weight:400;opacity:.75">(map loads here — Google Maps embed)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="final">
+      <h2>One free trial class. No card, no deposit.</h2>
+      <p>Message us on WhatsApp, tell us your child's level and subject, and we'll reply within a few hours with the next available slot.</p>
+      <a class="btn" href="https://wa.me/60123456789?text=Hi%2C%20I%27d%20like%20to%20book%20a%20free%20trial%20class">Message us on WhatsApp</a>
+    </div>
+
+    <footer>
+      <div>© 2026 Pusat Tuisyen Ceria · SS2, Petaling Jaya</div>
+      <div>Built as a sample design — one page, loads in under a second on mobile.</div>
+    </footer>
+  </div>
+</main>
+
+<a class="fab" href="https://wa.me/60123456789?text=Hi%2C%20I%27d%20like%20to%20ask%20about%20classes">💬 WhatsApp</a>
+
+</body>
+</html>
